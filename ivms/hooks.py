@@ -59,7 +59,8 @@ app_license = "MIT"
 # Permissions evaluated in scripted ways
 
 # permission_query_conditions = {
-# 	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
+#	"Event": "frappe.desk.doctype.event.event.get_permission_query_conditions",
+	# "Agent":"ivms.ivms.doctype.voucher.voucher.get_permission_query_conditions"}
 # }
 #
 # has_permission = {
@@ -109,5 +110,8 @@ app_license = "MIT"
 #
 # override_whitelisted_methods = {
 # 	"frappe.desk.doctype.event.event.get_events": "ivms.event.get_events"
+
+
 # }
+fixtures=['Custom Script','Property Setter','Custom Field']
 

@@ -6,13 +6,5 @@ from __future__ import unicode_literals
 import frappe
 from frappe.model.document import Document
 
-class Voucher(Document):
-	def validate(self):
-		total=0
-		for raw in self.get("itemised_expenses"):
-			total+=raw.cost
-		self.gross_amount=total
-		
-
-	
-
+class Manager(Document):
+	pass
