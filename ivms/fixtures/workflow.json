@@ -1,0 +1,122 @@
+[
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow", 
+  "document_type": "Voucher", 
+  "is_active": 1, 
+  "modified": "2016-04-27 12:50:09.380163", 
+  "name": "Voucher Workflow", 
+  "states": [
+   {
+    "allow_edit": "Employee", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Applied", 
+    "update_field": "status", 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Admin Officer", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Approved by Admin Officer", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Employee", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Rejected by Admin Officer", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Manager", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Approved By Manager", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Admin Officer", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Rejected by Manager", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Manager", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Rejected By Accounts Officer", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Accounts Officer", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Approved by Accounts Officer", 
+    "update_field": "status", 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Accounts Officer", 
+    "doc_status": "1", 
+    "message": null, 
+    "state": "Approved", 
+    "update_field": null, 
+    "update_value": null
+   }
+  ], 
+  "transitions": [
+   {
+    "action": "Approve", 
+    "allowed": "Admin Officer", 
+    "next_state": "Approved by Admin Officer", 
+    "state": "Applied"
+   }, 
+   {
+    "action": "Reject", 
+    "allowed": "Employee", 
+    "next_state": "Rejected by Admin Officer", 
+    "state": "Applied"
+   }, 
+   {
+    "action": "Approve", 
+    "allowed": "Manager", 
+    "next_state": "Approved By Manager", 
+    "state": "Approved by Admin Officer"
+   }, 
+   {
+    "action": "Reject", 
+    "allowed": "Admin Officer", 
+    "next_state": "Rejected by Manager", 
+    "state": "Approved by Admin Officer"
+   }, 
+   {
+    "action": "Approve", 
+    "allowed": "Accounts Officer", 
+    "next_state": "Approved by Accounts Officer", 
+    "state": "Approved By Manager"
+   }, 
+   {
+    "action": "Reject", 
+    "allowed": "Manager", 
+    "next_state": "Rejected By Accounts Officer", 
+    "state": "Approved By Manager"
+   }, 
+   {
+    "action": "Approve", 
+    "allowed": "Accounts Officer", 
+    "next_state": "Approved", 
+    "state": "Approved by Accounts Officer"
+   }
+  ], 
+  "workflow_name": "Voucher Workflow", 
+  "workflow_state_field": "workflow_state"
+ }
+]

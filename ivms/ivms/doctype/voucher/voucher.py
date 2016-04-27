@@ -12,6 +12,7 @@ class Voucher(Document):
 		for raw in self.get("itemised_expenses"):
 			total+=raw.cost
 		self.gross_amount=total
+		self.amount_payable=self.gross_amount-self.advance_amount
 		
 
 	
