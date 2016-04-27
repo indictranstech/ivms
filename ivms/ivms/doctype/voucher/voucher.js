@@ -7,3 +7,18 @@ frappe.ui.form.on('Voucher', {
 
 	}
 });
+frappe.ui.form.on("Voucher", "itemised_expenses_add", function(frm,cdt,cdn){
+	total=0
+        d=locals[cdt][cdn]
+        for (var i in d.cost)
+        {
+        	total=total+i
+
+
+         }
+         frm.set_value("gross_amount",total)
+         refresh_field("gross_amount")
+
+
+
+});
