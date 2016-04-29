@@ -7,8 +7,8 @@ def get_data():
 		{
 			"module_name": "Ivms",
 			"color": "grey",
-			"icon": "octicon octicon-file-directory",
+			"icon": "octicon octicon-repo",
 			"type": "module",
-			"label": _("Ivms")
+			"label": _("Indictrans Voucher Management System")
 		}
 	]

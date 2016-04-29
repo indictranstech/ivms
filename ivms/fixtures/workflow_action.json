@@ -19,5 +19,12 @@
   "modified": "2016-04-25 15:07:04.119024", 
   "name": "Review", 
   "workflow_action_name": "Review"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow Action", 
+  "modified": "2016-04-29 18:46:15.205936", 
+  "name": "Apply", 
+  "workflow_action_name": "Apply"
  }
 ]
