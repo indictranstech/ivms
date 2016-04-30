@@ -106,5 +106,77 @@
   "name": "Rejected by Admin Officer", 
   "style": "Warning", 
   "workflow_state_name": "Rejected by Admin Officer"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-04-30 12:20:49.693662", 
+  "name": "Apply", 
+  "style": "Primary", 
+  "workflow_state_name": "Apply"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-04-30 12:35:18.306011", 
+  "name": "Rejected by Admin Officer and Assigned Back To Employee", 
+  "style": "Info", 
+  "workflow_state_name": "Rejected by Admin Officer and Assigned Back To Employee"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-04-30 12:42:30.074880", 
+  "name": "Rejected By Manager Assigned Back to Admin Officer", 
+  "style": "", 
+  "workflow_state_name": "Rejected By Manager Assigned Back to Admin Officer "
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-04-30 13:00:06.770848", 
+  "name": "Rejected by Accounts Officer assigned back to Manager", 
+  "style": "Info", 
+  "workflow_state_name": "Rejected by Accounts Officer assigned back to Manager"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-04-30 13:24:21.370684", 
+  "name": "Reapplied", 
+  "style": "Primary", 
+  "workflow_state_name": "Reapplied"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-04-30 13:25:09.065240", 
+  "name": "Reapplied by Employee", 
+  "style": "Primary", 
+  "workflow_state_name": "Reapplied by Employee"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-04-30 13:26:30.711309", 
+  "name": "Reapplied by Admin Officer", 
+  "style": "Primary", 
+  "workflow_state_name": "Reapplied by Admin Officer"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-04-30 13:28:16.519502", 
+  "name": "Reapplied by Manager", 
+  "style": "Primary", 
+  "workflow_state_name": "Reapplied by Manager"
  }
 ]

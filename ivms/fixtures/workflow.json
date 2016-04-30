@@ -4,7 +4,7 @@
   "doctype": "Workflow", 
   "document_type": "Voucher", 
   "is_active": 1, 
-  "modified": "2016-04-29 19:26:39.442926", 
+  "modified": "2016-04-30 15:34:30.151862", 
   "name": "Voucher Workflow", 
   "states": [
    {
@@ -27,7 +27,7 @@
     "allow_edit": "Employee", 
     "doc_status": "0", 
     "message": null, 
-    "state": "Rejected by Admin Officer", 
+    "state": "Rejected by Admin Officer and Assigned Back To Employee", 
     "update_field": null, 
     "update_value": null
    }, 
@@ -43,15 +43,7 @@
     "allow_edit": "Admin Officer", 
     "doc_status": "0", 
     "message": null, 
-    "state": "Rejected by Manager", 
-    "update_field": null, 
-    "update_value": null
-   }, 
-   {
-    "allow_edit": "Manager", 
-    "doc_status": "0", 
-    "message": null, 
-    "state": "Rejected By Accounts Officer", 
+    "state": "Rejected By Manager Assigned Back to Admin Officer", 
     "update_field": null, 
     "update_value": null
    }, 
@@ -61,6 +53,38 @@
     "message": null, 
     "state": "Approved by Accounts Officer", 
     "update_field": "status", 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Manager", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Rejected by Accounts Officer assigned back to Manager", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Admin Officer", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Reapplied by Admin Officer", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Employee", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Reapplied by Employee", 
+    "update_field": null, 
+    "update_value": null
+   }, 
+   {
+    "allow_edit": "Manager", 
+    "doc_status": "0", 
+    "message": null, 
+    "state": "Reapplied by Manager", 
+    "update_field": null, 
     "update_value": null
    }, 
    {
@@ -81,27 +105,27 @@
    }, 
    {
     "action": "Reject", 
-    "allowed": "Employee", 
-    "next_state": "Rejected by Admin Officer", 
+    "allowed": "Admin Officer", 
+    "next_state": "Rejected by Admin Officer and Assigned Back To Employee", 
     "state": "Applied"
+   }, 
+   {
+    "action": "Apply", 
+    "allowed": "Employee", 
+    "next_state": "Reapplied by Employee", 
+    "state": "Rejected by Admin Officer and Assigned Back To Employee"
+   }, 
+   {
+    "action": "Reject", 
+    "allowed": "Manager", 
+    "next_state": "Rejected By Manager Assigned Back to Admin Officer", 
+    "state": "Approved by Admin Officer"
    }, 
    {
     "action": "Approve", 
     "allowed": "Manager", 
     "next_state": "Approved By Manager", 
     "state": "Approved by Admin Officer"
-   }, 
-   {
-    "action": "Reject", 
-    "allowed": "Employee", 
-    "next_state": "Rejected by Manager", 
-    "state": "Approved by Admin Officer"
-   }, 
-   {
-    "action": "Approve", 
-    "allowed": "Employee", 
-    "next_state": "Applied", 
-    "state": "Rejected by Admin Officer"
    }, 
    {
     "action": "Approve", 
@@ -110,10 +134,10 @@
     "state": "Approved By Manager"
    }, 
    {
-    "action": "Reject", 
+    "action": "Apply", 
     "allowed": "Admin Officer", 
-    "next_state": "Rejected By Accounts Officer", 
-    "state": "Approved By Manager"
+    "next_state": "Reapplied by Admin Officer", 
+    "state": "Rejected By Manager Assigned Back to Admin Officer"
    }, 
    {
     "action": "Approve", 
@@ -122,16 +146,58 @@
     "state": "Approved by Accounts Officer"
    }, 
    {
+    "action": "Apply", 
+    "allowed": "Manager", 
+    "next_state": "Reapplied by Manager", 
+    "state": "Rejected by Accounts Officer assigned back to Manager"
+   }, 
+   {
     "action": "Approve", 
     "allowed": "Admin Officer", 
     "next_state": "Approved by Admin Officer", 
-    "state": "Rejected by Manager"
+    "state": "Reapplied by Employee"
    }, 
    {
     "action": "Approve", 
     "allowed": "Manager", 
     "next_state": "Approved By Manager", 
-    "state": "Rejected By Accounts Officer"
+    "state": "Reapplied by Admin Officer"
+   }, 
+   {
+    "action": "Approve", 
+    "allowed": "Accounts Officer", 
+    "next_state": "Approved by Accounts Officer", 
+    "state": "Reapplied by Manager"
+   }, 
+   {
+    "action": "Reject", 
+    "allowed": "Admin Officer", 
+    "next_state": "Rejected by Admin Officer and Assigned Back To Employee", 
+    "state": "Reapplied by Employee"
+   }, 
+   {
+    "action": "Reject", 
+    "allowed": "Manager", 
+    "next_state": "Rejected By Manager Assigned Back to Admin Officer", 
+    "state": "Reapplied by Admin Officer"
+   }, 
+   {
+    "action": "Reject", 
+    "allowed": "Accounts Officer", 
+    "next_state": "Rejected by Accounts Officer assigned back to Manager", 
+    "state": "Reapplied by Manager"
+   }, 
+   {
+    "action": "Reject", 
+    "allowed": "Accounts Officer", 
+    "next_state": "Rejected by Accounts Officer assigned back to Manager", 
+    "state": "Approved By Manager"
+   }, 
+   {
+    "action": "Apply", 
+    "allowed": "Manager", 
+    "next_state": "Reapplied by Manager", 
+    "state": "Rejected by Accounts Officer assigned back to Manager"
    }
   ], 
   "workflow_name": "Voucher Workflow", 
