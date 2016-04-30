@@ -113,5 +113,5 @@ app_license = "MIT"
 
 
 # }
-fixtures=['Custom Script','Property Setter','Custom Field','Workflow','Workflow State','Workflow Action','Role']
+fixtures=['Custom Script','Property Setter','Custom Field','Workflow','Workflow State','Workflow Action','Role','Print Format']
 
