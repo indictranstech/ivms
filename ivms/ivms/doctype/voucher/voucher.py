@@ -7,11 +7,14 @@ import frappe
 from frappe.model.document import Document
 
 class Voucher(Document):
-	pass
+	def validate(self):
+		total=0
+		for raw in self.get("itemised_expenses"):
+			total+=raw.cost
+		self.gross_amount=total
+		self.amount_payable=self.gross_amount-self.advance_amount-self.prepaid_amount
+		# self.approved_amount=self.amount_payable
+		
 
-#  added by arpit for agent can see his data only
-# def get_permission_query_conditions(user):
-# 	if not user: user = frappe.session.user
-# 	if not user == "Administrator":
-# 	return """(`tabAgent`.user = '{0}')""".format(user)
-# # end of code
+	
+
