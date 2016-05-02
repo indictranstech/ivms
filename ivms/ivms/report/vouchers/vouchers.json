@@ -1,0 +1,19 @@
+{
+ "add_total_row": 0, 
+ "apply_user_permissions": 1, 
+ "creation": "2016-05-02 16:30:49.852730", 
+ "disabled": 0, 
+ "docstatus": 0, 
+ "doctype": "Report", 
+ "idx": 0, 
+ "is_standard": "Yes", 
+ "modified": "2016-05-02 18:27:35.056302", 
+ "modified_by": "Administrator", 
+ "module": "Ivms", 
+ "name": "Vouchers", 
+ "owner": "Administrator", 
+ "query": "select vo.name as \"Voucher Number :Link/Voucher:120\", \nvo.employee_name as \"Employee Name::120\",\nvo.employee as \"Employee:Link/Employee:120\",\nvo.manager as \"Manager:Link/Manager:120\",\nvo.department as \"Department::120\",\nvo.business_purpose as \"Business Purpose:2000\",\nvo.from as \"From Date:Date\",\nvo.to as \"To Date:Date\",\nie.date as \"Date:Date\",\nie.category as \"Category::120\",\nie.description as \"Description::120\",\nie.cost as \"Cost:Float:100\",\nvo.gross_amount as \"Gross Amount:Float:100\",\nvo.advance_amount as \"Advance Amount:Float:100\",\nvo.prepaid_amount as \"Prepaid Amount:Float:100\",\nvo.approved_amount as \"Approved Amount:Float:100\"\n\nfrom `tabVoucher` vo , `tabItemised Expense` ie  where vo.`name`=ie.`parent`\n\n\n", 
+ "ref_doctype": "Voucher", 
+ "report_name": "Vouchers", 
+ "report_type": "Query Report"
+}
