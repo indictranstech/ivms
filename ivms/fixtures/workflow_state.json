@@ -178,5 +178,14 @@
   "name": "Reapplied by Manager", 
   "style": "Primary", 
   "workflow_state_name": "Reapplied by Manager"
+ }, 
+ {
+  "docstatus": 0, 
+  "doctype": "Workflow State", 
+  "icon": "", 
+  "modified": "2016-05-03 11:16:12.000595", 
+  "name": "Canceled", 
+  "style": "Inverse", 
+  "workflow_state_name": "Canceled"
  }
 ]
