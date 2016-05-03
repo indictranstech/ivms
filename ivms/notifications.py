@@ -1,9 +1,7 @@
 def get_notification_config():
-	
-	return { "for_doctype":
-		{
-			
-			"Voucher": {"docstatus": 0}
+	return { 
+		"for_doctype":{
+			"Voucher": { "docstatus": 0 }
 		}
 	}
 
