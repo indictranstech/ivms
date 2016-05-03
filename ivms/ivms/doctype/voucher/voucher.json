@@ -425,7 +425,7 @@
  "issingle": 0, 
  "istable": 0, 
  "max_attachments": 0, 
- "modified": "2016-05-02 19:21:04.407328", 
+ "modified": "2016-05-03 11:34:05.648650", 
  "modified_by": "Administrator", 
  "module": "Ivms", 
  "name": "Voucher", 
@@ -473,9 +473,9 @@
    "write": 1
   }, 
   {
-   "amend": 1, 
+   "amend": 0, 
    "apply_user_permissions": 0, 
-   "cancel": 1, 
+   "cancel": 0, 
    "create": 1, 
    "delete": 1, 
    "email": 1, 
@@ -489,7 +489,7 @@
    "role": "Employee", 
    "set_user_permissions": 0, 
    "share": 1, 
-   "submit": 1, 
+   "submit": 0, 
    "write": 1
   }, 
   {
