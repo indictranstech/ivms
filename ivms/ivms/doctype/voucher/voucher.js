@@ -29,6 +29,7 @@ frappe.ui.form.on("Voucher","manager" ,function(frm){
 				if(r.message){
 					frm.set_value("manager_name", r.message);
 			}	
+			}	
 		});
 })
 frappe.ui.form.on("Voucher","accounts_officer" ,function(frm){
