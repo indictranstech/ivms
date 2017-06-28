@@ -16,10 +16,10 @@ class Voucher(Document):
 		# self.approved_amount=self.amount_payable
 
 def get_manager_list(doctype, txt, searchfield, start, page_len, filters):
-	data = frappe.db.sql("""select  parent from `tabUserRole` where role='Manager' """)
+	data = frappe.db.sql("""select  parent from `tabHas Role` where role='Manager' """)
 	return data
 
 def get_accounts_officer_list(doctype, txt, searchfield, start, page_len, filters):
-	data = frappe.db.sql("""select parent from `tabUserRole` where role='Accounts Officer' """)
+	data = frappe.db.sql("""select parent from `tabHas Role` where role='Accounts Officer' """)
 	return data
 
